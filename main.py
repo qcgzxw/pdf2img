@@ -9,7 +9,6 @@ from tkinter import ttk
 def convert_pdf_to_images(pdf_path, output_folder, merge_pages, output_to_folder, progress_var, current_file_var):
     try:
         folder = pathlib.Path(__file__).parent.resolve()
-        print(f'{folder}/poppler/Library/bin')
         images = convert_from_path(pdf_path, poppler_path=f'{folder}/poppler/Library/bin')
         base_name = os.path.splitext(os.path.basename(pdf_path))[0]
 

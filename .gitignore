@@ -3,3 +3,4 @@ Pipfile
 *.sh
 *.bat
 dist
+main.spec
