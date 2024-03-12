@@ -19,9 +19,9 @@ jobs:
         python-version: '3.10'
 
     - run: pip install -r requirements.txt pyinstaller
-    - run: pyinstaller -F --noconsole --add-data "./poppler;./poppler" main.py
+    - run: pyinstaller -F --noconsole --add-data="./poppler;./poppler" main.py
     # Optionally verify that it works (provided that it does not need user interaction)
-    - run: ./dist/main.txt
+    - run: ./dist/main.exe
     - uses: actions/upload-artifact@v2
       with:
         path: dist/*
